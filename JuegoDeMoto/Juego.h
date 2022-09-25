@@ -33,16 +33,12 @@ public:
 		delete objMoneda;
 	}
 
-	void mostraGatos()
+	void mostraGatos(int y)
 	{
-		
-			objGato->borrar();
-			objGato->dibujar();
-			objGato->mover_H();
-
+		objGato->borrar();
+		objGato->mover_H(y);
+		objGato->dibujar();
 			//_sleep(100);
-		
-
 	}
 
 	void Inicio_Juego() {
@@ -63,8 +59,17 @@ public:
 			objmotociclista->borrar();
 			objmotociclista->dibujar();
 			objmotociclista->mover();
+			while (true) {
+				int r = rand() % 2 + 1;
+				mostraGatos(r);
+				mostraGatos(r);
+				mostraGatos(r);
+				mostraGatos(r);
+				mostraGatos(r);
+				_sleep(100);
+			}
 
-			mostraGatos();
+
 
 			//Aparece el auto para llevarse la monedas
 			if (objmotociclista->Get_Monedas() == 6) {

@@ -25,21 +25,24 @@ public:
 
 	}
 	//Lluvia
-	void mover_H() {
+	void mover_V() {
+		
+		for (int i = 0; i < rand() % 7 + 1; i++) {
+			borrar();
+			y++;
+			dibujar();
+		};
+	}
+
+	void mover_H(int y) {
 	
 		
 		if (x > 78 || x < 1) { dx *= -1; }
-
+		this->y = y;
 		x = x + dx;
 	
 	}
-	void mover_V() {
-		borrar();
-		for (int i = 0; i < rand() % 7 + 1; i++) {
-			y++;
-		}
-		
-	}
+	
 	double get_X() { return this->x; }
 	double get_Y() { return this->y; }
 };
