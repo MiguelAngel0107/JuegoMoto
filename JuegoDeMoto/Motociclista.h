@@ -27,13 +27,13 @@ public:
 
 	//Borrar moto
 	void borrar() {
-		Console::SetCursorPosition(x, y + 0); cout << "   ";
-		Console::SetCursorPosition(x, y + 1); cout << "   ";
+		Console::SetCursorPosition(x, y + 0); cout << "     ";
+		Console::SetCursorPosition(x, y + 1); cout << "      ";
 	}
 
 	//Dibujar Moto
 	void dibujar() {
-		Console::SetCursorPosition(x, y + 0); cout << " ---_\\";
+		Console::SetCursorPosition(x, y + 0); cout << "---_\\";
 		Console::SetCursorPosition(x, y + 1); cout << "(O)(O)";
 	}
 

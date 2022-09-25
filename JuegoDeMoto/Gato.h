@@ -26,12 +26,12 @@ public:
 	}
 	//Lluvia
 	void mover_H() {
-		borrar();
-		mover_V();
+	
+		
 		if (x > 78 || x < 1) { dx *= -1; }
 
 		x = x + dx;
-		dibujar();
+	
 	}
 	void mover_V() {
 		borrar();

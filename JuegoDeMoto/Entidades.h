@@ -11,6 +11,7 @@ class Entidades
 public:
 	Entidades(double px, double py) {
 		this->x = px;
+		this->x = px;//shdnaudbwu
 		this->y = py;
 	}
 	~Entidades(){};

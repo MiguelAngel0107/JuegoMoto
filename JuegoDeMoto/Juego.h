@@ -44,6 +44,7 @@ public:
 		
 
 	}
+
 	void Inicio_Juego() {
 		int T = 0;
 		Console::ForegroundColor = ConsoleColor::Red;
