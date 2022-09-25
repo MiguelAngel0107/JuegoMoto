@@ -17,6 +17,7 @@ protected:
 
 public:
 	int M_final = 0;
+	int cont = 1;
 
 	Juego() {
 		objmotociclista = new Motociclista(20, 40);
@@ -34,11 +35,12 @@ public:
 	}
 
 	void mostraGatos(int y)
-	{
-		objGato->borrar();
-		objGato->mover_H(y);
-		objGato->dibujar();
-			//_sleep(100);
+	{	
+
+			objGato->borrar(y);
+			objGato->mover_H(y);
+			objGato->dibujar(y);
+			_sleep(70);
 	}
 
 	void Inicio_Juego() {
@@ -58,16 +60,10 @@ public:
 			//Cosas de la moto
 			objmotociclista->borrar();
 			objmotociclista->dibujar();
-			objmotociclista->mover();
-			while (true) {
-				int r = rand() % 2 + 1;
-				mostraGatos(r);
-				mostraGatos(r);
-				mostraGatos(r);
-				mostraGatos(r);
-				mostraGatos(r);
-				_sleep(100);
-			}
+			//objmotociclista->mover();
+				mostraGatos(cont+5);		
+				mostraGatos(cont);
+
 
 
 

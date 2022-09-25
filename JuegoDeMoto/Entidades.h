@@ -16,6 +16,8 @@ public:
 	}
 	~Entidades(){};
 
+	void set_x(int valor) { x = valor; }
+
 	double get_x() { return this->x; }
 	double get_y() { return this->y; }
 
